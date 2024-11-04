@@ -32,3 +32,46 @@
     `wsl -d Ubuntu`
 2.  Run the following command to watch GPU usage:  
     `watch -n 0.5 nvidia-smi`
+
+## Adding Stable Diffusion
+### Install pyenv on wsl
+1. Install prerequest. Run:
+   `sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git`
+2. Install pyenv. Run:
+   `curl https://pyenv.run | bash`
+3. Setup pyenv. Run:
+   `export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"`
+4. Refresh terminal. Run:
+   `source .bashrc`
+### Install python 3.10
+1. Install python 3.10 for pyenv. Run:
+   `pyenv install 3.10`
+2. Set python 3.10 as default. Run:
+   `pyenv global 3.10`
+
+### Install AUTOMATIC1111
+1. Create directory. Run:
+   `mkdir stabledeffusion`
+2. Run:
+   `cd stabledeffusion`
+3. Download installer. Run:
+   `wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh`
+4. Make it executable. Run:
+   `chmod +x webui.sh`
+5. Start install. Run:
+   `./webui.sh --listen --api`
+6. Browse http://127.0.0.1:7860/ to generate images locally. 
+### Add AUTOMATIC1111 to Open WebUI
+1. Go to the Admin Panel in Open WebUI.
+2. Select Settings -> Images.
+3. Choose AUTOMATIC1111 for the Image Generation Engine.
+4. Enter http://127.0.0.1:7860/ for the Base URL.
+5. Check the Image Generation (Experimental) option.
+6. Done! You should now see the image generation icon in the chat.
+
+   
+
