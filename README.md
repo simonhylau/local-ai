@@ -3,7 +3,7 @@
 ## Running AI from the Command Line
 
 1.  On Windows, open the command prompt and run: `wsl --install`.
-3.  [Install Ollama](https://ollama.com/download/linux)Run:  
+3.  [Install Ollama](https://ollama.com/download/linux) Run:  
     `curl -fsSL https://ollama.com/install.sh | sh`
 4.  Download the AI model:  
     `ollama pull llama2`  
