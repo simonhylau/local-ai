@@ -3,8 +3,7 @@
 ## Running AI from the Command Line
 
 1.  On Windows, open the command prompt and run: `wsl --install`.
-2.  Go to [https://ollama.com/download/linux](https://ollama.com/download/linux) to get the following command to install Ollama.
-3.  Run:  
+3.  [Install Ollama](https://ollama.com/download/linux)Run:  
     `curl -fsSL https://ollama.com/install.sh | sh`
 4.  Download the AI model:  
     `ollama pull llama2`  
@@ -15,16 +14,15 @@
 
 ## Installing the UI
 
-1.  Install Docker in WSL. Follow the steps at Docker's documentation for Ubuntu. `docker pull ghcr.io/open-webui/open-webui:git-5ae6d05` ([https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)).
-2.  Install Open WebUI:  
-    `sudo docker pull ghcr.io/open-webui/open-webui`
-    Reference: Open WebUI GitHub Repository ([https://github.com/open-webui/open-webui/pkgs/container/open-webui](https://github.com/open-webui/open-webui/pkgs/container/open-webui))
-3.  Run the following command to start Open WebUI:  
+1.  [Install Docker in WSL. Follow the steps at Docker's documentation for Ubuntu.](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+3.  Ref to the [Install from the command line](https://github.com/open-webui/open-webui/pkgs/container/open-webui) to Install Open WebUI:  
+    e.g. `sudo docker pull ghcr.io/open-webui/open-webui` or `sudo docker pull ghcr.io/open-webui/open-webui:git-5ae6d05` 
+4.  Run the following command to start Open WebUI:  
     `sudo docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:git-5ae6d05`
     
-4.  Open your browser and go to [http://127.0.0.1:8080/](http://127.0.0.1:8080/), then create an admin account.
-5.  If you have multiple models installed, you can select them from the top menu.
-6.  Done!
+5.  Open your browser and go to [http://127.0.0.1:8080/](http://127.0.0.1:8080/), then create an admin account.
+6.  If you have multiple models installed, you can select them from the top menu.
+7.  Done!
 
 ## Monitoring NVIDIA Loading
 
