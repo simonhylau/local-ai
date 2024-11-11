@@ -2,7 +2,8 @@
 
 ## Running AI from the Command Line
 
-1.  On Windows, open the command prompt and run: `wsl --install`.
+1.  On Windows, open the command prompt and run: `wsl --install` or `wsl --install ubuntu`.
+2.  Reboot maybe required.
 3.  [Install Ollama](https://ollama.com/download/linux) Run:  
     `curl -fsSL https://ollama.com/install.sh | sh`
 4.  Download the AI model:  
